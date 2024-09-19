@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:myanmar_air_international/base/res/media.dart';
 import 'package:myanmar_air_international/base/res/styles/app_styles.dart';
 import 'package:myanmar_air_international/base/widgets/app_double_text.dart';
+import 'package:myanmar_air_international/base/widgets/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -75,6 +76,7 @@ class HomeScreen extends StatelessWidget {
                   bigText: 'Upcoming Flights',
                   smallText: 'View All',
                 ),
+                TicketView()
               ],
             ),
           ),
