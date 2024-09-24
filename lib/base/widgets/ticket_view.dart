@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:myanmar_air_international/base/res/styles/app_styles.dart';
+import 'package:myanmar_air_international/base/widgets/app_layoutbuilder_widget.dart';
+import 'package:myanmar_air_international/base/widgets/big_dot.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
@@ -22,7 +24,28 @@ class TicketView extends StatelessWidget {
             child: Column(
               children: [
                 Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    Text(
+                      'NYC',
+                      style: AppStyles.headLineStyle3
+                          .copyWith(color: Colors.white),
+                    ),
+                    Expanded(child: Container()),
+                    const BigDot(),
+                    const Expanded(
+                        child: Stack(
+                      children: [
+                        SizedBox(
+                          child: AppLayoutbuilderWidget(randomDivider: 6),
+                        ),
+                        Center(
+                          child: Text('Plane'),
+                        )
+                      ],
+                    )),
+                    const BigDot(),
+                    Expanded(child: Container()),
                     Text(
                       'NYC',
                       style: AppStyles.headLineStyle3
