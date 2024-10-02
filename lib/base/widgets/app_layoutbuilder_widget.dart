@@ -11,10 +11,16 @@ class AppLayoutbuilderWidget extends StatelessWidget {
       print(
           "Constaints=> ${constraints.constrainWidth() / randomDivider.floor()}");
       return Flex(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         direction: Axis.horizontal,
         children: List.generate(
             (constraints.constrainWidth() / randomDivider).floor(),
-            (index) => const SizedBox()),
+            (index) => const SizedBox(
+                  width: 3,
+                  height: 1,
+                  child: DecoratedBox(
+                      decoration: BoxDecoration(color: Colors.white)),
+                )),
       );
     });
   }
